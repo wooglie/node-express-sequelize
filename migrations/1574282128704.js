@@ -1,6 +1,7 @@
 'use strict';
 
 const sid = require('shortid');
+const DataTypes = require('sequelize').DataTypes
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,34 +9,34 @@ module.exports = {
       uid: {
         allowNull: false,
         primaryKey: true,
-        default: sid.generate(),
-        type: Sequelize.STRING,
+        defaultValue: sid.generate(),
+        type: DataTypes.STRING,
         unique: true,
       },
 
       email: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
 
       password: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
 
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       },
 
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       },
 
       deletedAt: {
         allowNull: true,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       },
     });
   },

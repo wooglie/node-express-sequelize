@@ -1,10 +1,13 @@
 {
-  "name": "node-express-sequelize",
+  "name": "NESS",
   "version": "0.0.1",
-  "description": "node.js express sequelize typescript startup project",
+  "description": "node.js express sequelize socket.io typescript startup project",
   "main": "dist/server.js",
-  "author": "Ivan Magaš aka wooglie",
+  "author": "Ivan Magaš aka wooglie, 800.hr",
   "license": "MIT",
+  "repository": {
+    "url": "git@github.com:wooglie/node-express-sequelize-socket.git"
+  },
   "scripts": {
     "archive": "git archive -v -o deploys/0.0.1.zip --format=zip HEAD",
     "build": "tsc",
@@ -17,6 +20,7 @@
     "watch-node": "nodemon dist/server.js",
     "db:create": "node scripts/create-database.js",
     "db:create:migration": "node scripts/create-migration-file.js",
+    "db:create:seed": "node scripts/create-seed-file.js",
     "db:drop": "node scripts/drop-database.js",
     "db:migrate": "node scripts/migrate-database.js migrate",
     "db:migrate:undo": "node scripts/migrate-database.js migrate:undo",
